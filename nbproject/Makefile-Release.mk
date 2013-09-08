@@ -58,28 +58,28 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk lib/liblibgltools.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a: ${OBJECTFILES}
-	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
-	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a ${OBJECTFILES} 
-	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
+lib/liblibgltools.a: ${OBJECTFILES}
+	${MKDIR} -p lib
+	${RM} lib/liblibgltools.a
+	${AR} -rv lib/liblibgltools.a ${OBJECTFILES} 
+	$(RANLIB) lib/liblibgltools.a
 
 ${OBJECTDIR}/src/Model.o: src/Model.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Model.o src/Model.cpp
+	$(COMPILE.cc) -O2 -s -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Model.o src/Model.cpp
 
 ${OBJECTDIR}/src/Triangle.o: src/Triangle.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Triangle.o src/Triangle.cpp
+	$(COMPILE.cc) -O2 -s -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Triangle.o src/Triangle.cpp
 
 ${OBJECTDIR}/src/Vertex.o: src/Vertex.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
+	$(COMPILE.cc) -O2 -s -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
 
 # Subprojects
 .build-subprojects:
@@ -87,7 +87,7 @@ ${OBJECTDIR}/src/Vertex.o: src/Vertex.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
+	${RM} lib/liblibgltools.a
 
 # Subprojects
 .clean-subprojects:

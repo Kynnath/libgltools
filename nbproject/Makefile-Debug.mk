@@ -58,13 +58,13 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk lib/liblibgltools-d.a
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a: ${OBJECTFILES}
-	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
-	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a ${OBJECTFILES} 
-	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
+lib/liblibgltools-d.a: ${OBJECTFILES}
+	${MKDIR} -p lib
+	${RM} lib/liblibgltools-d.a
+	${AR} -rv lib/liblibgltools-d.a ${OBJECTFILES} 
+	$(RANLIB) lib/liblibgltools-d.a
 
 ${OBJECTDIR}/src/Model.o: src/Model.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -87,7 +87,7 @@ ${OBJECTDIR}/src/Vertex.o: src/Vertex.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
+	${RM} lib/liblibgltools-d.a
 
 # Subprojects
 .clean-subprojects:

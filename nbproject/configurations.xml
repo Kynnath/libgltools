@@ -47,6 +47,7 @@
       </toolsSet>
       <compileType>
         <archiverTool>
+          <output>lib/liblibgltools-d.a</output>
         </archiverTool>
       </compileType>
       <item path="src/Model.cpp" ex="false" tool="1" flavor2="0">
@@ -75,6 +76,7 @@
         </cTool>
         <ccTool>
           <developmentMode>5</developmentMode>
+          <stripSymbols>true</stripSymbols>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -83,6 +85,7 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <archiverTool>
+          <output>lib/liblibgltools.a</output>
         </archiverTool>
       </compileType>
       <item path="src/Model.cpp" ex="false" tool="1" flavor2="0">
