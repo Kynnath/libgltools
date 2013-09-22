@@ -8,11 +8,16 @@
 #ifndef MODEL_HPP
 #define	MODEL_HPP
 
+#include <vector>
+#include "GL/glew.h"
+#include "Vertex.hpp"
+
 namespace glt
 {
     struct Model
     {
-
+        std::vector< Vertex > vertexList;
+        std::vector< GLuint > indexList;
     };
 }
 

@@ -17,7 +17,7 @@ RANLIB=ranlib
 CC=gcc.exe
 CCC=g++.exe
 CXX=g++.exe
-FC=gfortran.exe
+FC=gfortran
 AS=as.exe
 
 # Macros
@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/196920952/Shader.o \
+	${OBJECTDIR}/src/MatrixStack.o \
 	${OBJECTDIR}/src/Model.o \
 	${OBJECTDIR}/src/Triangle.o \
 	${OBJECTDIR}/src/Vertex.o
@@ -66,20 +68,30 @@ lib/liblibgltools.a: ${OBJECTFILES}
 	${AR} -rv lib/liblibgltools.a ${OBJECTFILES} 
 	$(RANLIB) lib/liblibgltools.a
 
+${OBJECTDIR}/_ext/196920952/Shader.o: /C/Users/JoPe/Documents/NetBeansProjects/libgltools/src/Shader.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/196920952
+	${RM} $@.d
+	$(COMPILE.cc) -O3 -Wall -s -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/196920952/Shader.o /C/Users/JoPe/Documents/NetBeansProjects/libgltools/src/Shader.cpp
+
+${OBJECTDIR}/src/MatrixStack.o: src/MatrixStack.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -O3 -Wall -s -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/MatrixStack.o src/MatrixStack.cpp
+
 ${OBJECTDIR}/src/Model.o: src/Model.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Model.o src/Model.cpp
+	$(COMPILE.cc) -O3 -Wall -s -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Model.o src/Model.cpp
 
 ${OBJECTDIR}/src/Triangle.o: src/Triangle.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Triangle.o src/Triangle.cpp
+	$(COMPILE.cc) -O3 -Wall -s -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Triangle.o src/Triangle.cpp
 
 ${OBJECTDIR}/src/Vertex.o: src/Vertex.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -s -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
+	$(COMPILE.cc) -O3 -Wall -s -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
 
 # Subprojects
 .build-subprojects:

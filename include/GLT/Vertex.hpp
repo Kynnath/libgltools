@@ -8,13 +8,15 @@
 #ifndef VERTEX_HPP
 #define	VERTEX_HPP
 
+#include "GL/glew.h"
+
 namespace glt
 {
     struct Vertex
     {
-        float x;
-        float y;
-        float z;
+        GLfloat x;
+        GLfloat y;
+        GLfloat z;
     };
 }
 
