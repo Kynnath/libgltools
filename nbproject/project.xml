@@ -10,8 +10,8 @@
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\src</sourceRootElem>
-                <sourceRootElem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\include\GLT</sourceRootElem>
+                <sourceRootElem>src</sourceRootElem>
+                <sourceRootElem>include/GLT</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

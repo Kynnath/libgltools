@@ -5,6 +5,8 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="GLT" displayName="GLT" projectFiles="true">
+        <itemPath>include/GLT/GLMatrix.hpp</itemPath>
+        <itemPath>include/GLT/MVPMatrix.hpp</itemPath>
         <itemPath>include/GLT/MatrixStack.hpp</itemPath>
         <itemPath>include/GLT/Model.hpp</itemPath>
         <itemPath>include/GLT/Shader.hpp</itemPath>
@@ -20,9 +22,11 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>src/GLMatrix.cpp</itemPath>
+        <itemPath>C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp</itemPath>
         <itemPath>src/MatrixStack.cpp</itemPath>
         <itemPath>src/Model.cpp</itemPath>
-        <itemPath>C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/Shader.cpp</itemPath>
+        <itemPath>src/Shader.cpp</itemPath>
         <itemPath>src/Triangle.cpp</itemPath>
         <itemPath>src/Vertex.cpp</itemPath>
       </logicalFolder>
@@ -40,8 +44,8 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\src</Elem>
-    <Elem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\include\GLT</Elem>
+    <Elem>src</Elem>
+    <Elem>include/GLT</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -58,6 +62,7 @@
           <incDir>
             <pElem>include</pElem>
             <pElem>../libmatrix/include</pElem>
+            <pElem>../libvector/include</pElem>
             <pElem>C:/lib/glew-1.10.0/include</pElem>
           </incDir>
           <warningLevel>2</warningLevel>
@@ -66,10 +71,14 @@
           <output>lib/liblibgltools-d.a</output>
         </archiverTool>
       </compileType>
-      <item path="C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/Shader.cpp"
+      <item path="C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp"
             ex="false"
             tool="1"
             flavor2="0">
+      </item>
+      <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/GLT/MVPMatrix.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/GLT/MatrixStack.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -81,9 +90,13 @@
       </item>
       <item path="include/GLT/Vertex.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/GLMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/MatrixStack.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Model.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Triangle.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -108,6 +121,7 @@
           <incDir>
             <pElem>include</pElem>
             <pElem>../libmatrix/include</pElem>
+            <pElem>../libvector/include</pElem>
             <pElem>C:/lib/glew-1.10.0/include</pElem>
           </incDir>
           <warningLevel>2</warningLevel>
@@ -122,10 +136,14 @@
           <output>lib/liblibgltools.a</output>
         </archiverTool>
       </compileType>
-      <item path="C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/Shader.cpp"
+      <item path="C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp"
             ex="false"
             tool="1"
             flavor2="0">
+      </item>
+      <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="include/GLT/MVPMatrix.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/GLT/MatrixStack.hpp" ex="false" tool="3" flavor2="0">
       </item>
@@ -137,9 +155,13 @@
       </item>
       <item path="include/GLT/Vertex.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/GLMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="src/MatrixStack.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Model.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Triangle.cpp" ex="false" tool="1" flavor2="0">
       </item>

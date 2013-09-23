@@ -17,7 +17,7 @@ RANLIB=ranlib
 CC=gcc.exe
 CCC=g++.exe
 CXX=g++.exe
-FC=gfortran
+FC=gfortran.exe
 AS=as.exe
 
 # Macros
@@ -35,9 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/196920952/Shader.o \
+	${OBJECTDIR}/_ext/196920952/MVPMatrix.o \
+	${OBJECTDIR}/src/GLMatrix.o \
 	${OBJECTDIR}/src/MatrixStack.o \
 	${OBJECTDIR}/src/Model.o \
+	${OBJECTDIR}/src/Shader.o \
 	${OBJECTDIR}/src/Triangle.o \
 	${OBJECTDIR}/src/Vertex.o
 
@@ -68,30 +70,40 @@ lib/liblibgltools-d.a: ${OBJECTFILES}
 	${AR} -rv lib/liblibgltools-d.a ${OBJECTFILES} 
 	$(RANLIB) lib/liblibgltools-d.a
 
-${OBJECTDIR}/_ext/196920952/Shader.o: /C/Users/JoPe/Documents/NetBeansProjects/libgltools/src/Shader.cpp 
+${OBJECTDIR}/_ext/196920952/MVPMatrix.o: /C/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/196920952
 	${RM} $@.d
-	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/196920952/Shader.o /C/Users/JoPe/Documents/NetBeansProjects/libgltools/src/Shader.cpp
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/196920952/MVPMatrix.o /C/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp
+
+${OBJECTDIR}/src/GLMatrix.o: src/GLMatrix.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GLMatrix.o src/GLMatrix.cpp
 
 ${OBJECTDIR}/src/MatrixStack.o: src/MatrixStack.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/MatrixStack.o src/MatrixStack.cpp
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/MatrixStack.o src/MatrixStack.cpp
 
 ${OBJECTDIR}/src/Model.o: src/Model.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Model.o src/Model.cpp
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Model.o src/Model.cpp
+
+${OBJECTDIR}/src/Shader.o: src/Shader.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Shader.o src/Shader.cpp
 
 ${OBJECTDIR}/src/Triangle.o: src/Triangle.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Triangle.o src/Triangle.cpp
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Triangle.o src/Triangle.cpp
 
 ${OBJECTDIR}/src/Vertex.o: src/Vertex.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
-	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
 
 # Subprojects
 .build-subprojects:
