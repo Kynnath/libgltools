@@ -36,24 +36,22 @@ namespace glt
         {
             GLint lengthLog ( 0 );
             glGetShaderiv( vertexShader, GL_INFO_LOG_LENGTH, &lengthLog );
-            char * compilerLog = new char[lengthLog];
-            //compilerLog.resize( lengthLog, 0 );
-            glGetShaderInfoLog( vertexShader, lengthLog, NULL, compilerLog );
-            std::cout << compilerLog << std::endl;
-            delete[] compilerLog;
+            std::vector< char > compilerLog;
+            compilerLog.resize( lengthLog, 0 );
+            glGetShaderInfoLog( vertexShader, lengthLog, NULL, compilerLog.data() );
+            std::cout << compilerLog.data() << std::endl;
         }
         assert( checkCompile != GL_FALSE );
-        
+
         glGetShaderiv( fragmentShader, GL_COMPILE_STATUS, &checkCompile );
         if ( checkCompile == GL_FALSE )
         {
             GLint lengthLog ( 0 );
             glGetShaderiv( fragmentShader, GL_INFO_LOG_LENGTH, &lengthLog );
-            char * compilerLog = new char[lengthLog];
-            //compilerLog.resize( lengthLog, 0 );
-            glGetShaderInfoLog( fragmentShader, lengthLog, NULL, compilerLog );
-            std::cout << compilerLog << std::endl;
-            delete[] compilerLog;
+            std::vector< char > compilerLog;
+            compilerLog.resize( lengthLog, 0 );
+            glGetShaderInfoLog( fragmentShader, lengthLog, NULL, compilerLog.data() );
+            std::cout << compilerLog.data() << std::endl;
         }
         assert( checkCompile != GL_FALSE );
 #endif //NDEBUG
@@ -70,12 +68,10 @@ namespace glt
         {
             GLint lengthLog ( 0 );
             glGetProgramiv( programID, GL_INFO_LOG_LENGTH, &lengthLog );
-            char * linkerLog = new char[lengthLog];
-            //compilerLog.resize( lengthLog, 0 );
-            GLsizei lengthWritten;
-            glGetProgramInfoLog( programID, lengthLog, &lengthWritten, linkerLog );
-            std::cout << linkerLog << std::endl;
-            delete[] linkerLog;
+            std::vector< char > linkerLog;
+            linkerLog.resize( lengthLog, 0 );
+            glGetProgramInfoLog( programID, lengthLog, NULL, linkerLog.data() );
+            std::cout << linkerLog.data() << std::endl;
         }
         assert( checkLink != GL_FALSE );
 #endif //NDEBUG
