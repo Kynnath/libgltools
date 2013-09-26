@@ -10,14 +10,19 @@
 
 #include "GLT/GLMatrix.hpp"
 #include "MAT/Matrix4.hpp"
-
-namespace vec
-{
-    struct Vector3;
-}
+#include "VEC/Vector3.hpp"
 
 namespace glt
 {
+    struct ViewVectors
+    {
+        vec::Vector3 position;
+        vec::Vector3 forward;
+        vec::Vector3 up;
+
+        mat::Matrix4 BuildViewMatrix();
+    };
+
     class MVPMatrix
     {
         public:
