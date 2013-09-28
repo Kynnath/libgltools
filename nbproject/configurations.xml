@@ -5,7 +5,9 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="GLT" displayName="GLT" projectFiles="true">
+        <itemPath>include/GLT/Frame.hpp</itemPath>
         <itemPath>include/GLT/GLMatrix.hpp</itemPath>
+        <itemPath>include/GLT/GeometryTransform.hpp</itemPath>
         <itemPath>include/GLT/MVPMatrix.hpp</itemPath>
         <itemPath>include/GLT/MatrixStack.hpp</itemPath>
         <itemPath>include/GLT/Model.hpp</itemPath>
@@ -22,7 +24,9 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="src" displayName="src" projectFiles="true">
+        <itemPath>src/Frame.cpp</itemPath>
         <itemPath>src/GLMatrix.cpp</itemPath>
+        <itemPath>src/GeometryTransform.cpp</itemPath>
         <itemPath>C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp</itemPath>
         <itemPath>src/MatrixStack.cpp</itemPath>
         <itemPath>src/Model.cpp</itemPath>
@@ -42,8 +46,6 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
-    <itemPath>src/Frame.cpp</itemPath>
-    <itemPath>include/GLT/Frame.hpp</itemPath>
   </logicalFolder>
   <sourceRootList>
     <Elem>src</Elem>
@@ -82,6 +84,8 @@
       </item>
       <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/GLT/GeometryTransform.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/GLT/MVPMatrix.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/GLT/MatrixStack.hpp" ex="false" tool="3" flavor2="0">
@@ -97,6 +101,8 @@
       <item path="src/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GLMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GeometryTransform.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/MatrixStack.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -154,6 +160,8 @@
       </item>
       <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="include/GLT/GeometryTransform.hpp" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="include/GLT/MVPMatrix.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/GLT/MatrixStack.hpp" ex="false" tool="3" flavor2="0">
@@ -169,6 +177,8 @@
       <item path="src/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GLMatrix.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GeometryTransform.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/MatrixStack.cpp" ex="false" tool="1" flavor2="0">
       </item>

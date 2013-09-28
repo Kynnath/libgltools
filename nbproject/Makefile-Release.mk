@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/196920952/MVPMatrix.o \
 	${OBJECTDIR}/src/Frame.o \
 	${OBJECTDIR}/src/GLMatrix.o \
+	${OBJECTDIR}/src/GeometryTransform.o \
 	${OBJECTDIR}/src/MatrixStack.o \
 	${OBJECTDIR}/src/Model.o \
 	${OBJECTDIR}/src/Shader.o \
@@ -85,6 +86,11 @@ ${OBJECTDIR}/src/GLMatrix.o: src/GLMatrix.cpp
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -O3 -Wall -s -DNDEBUG -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GLMatrix.o src/GLMatrix.cpp
+
+${OBJECTDIR}/src/GeometryTransform.o: src/GeometryTransform.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -O3 -Wall -s -DNDEBUG -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/GeometryTransform.o src/GeometryTransform.cpp
 
 ${OBJECTDIR}/src/MatrixStack.o: src/MatrixStack.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
