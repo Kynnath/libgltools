@@ -12,7 +12,7 @@
 
 struct GLMatrix
 {
-    GLfloat data[16];
+    GLfloat m_data[16];
 };
 
 #endif	/* GLMATRIX_HPP */

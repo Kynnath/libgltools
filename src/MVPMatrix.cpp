@@ -53,7 +53,7 @@ namespace glt
     void MVPMatrix::SetView( vec::Vector3 const& i_position, vec::Vector3 const& i_forward, vec::Vector3 const& i_up )
     {
         mat::Matrix4 const rotationMat ( BuildViewRotationMatrix( i_forward, i_up ) );
-        mat::Matrix4 const translationMat ( BuildTranslationMatrix( i_position ) );
+        mat::Matrix4 const translationMat ( BuildViewTranslationMatrix( i_position ) );
 
         ViewMatrix = mat::Multiply( rotationMat, translationMat );
     }
@@ -68,7 +68,7 @@ namespace glt
 
         for ( int i = 0; i < 16; ++i )
         {
-            MVPMatrixGL.data[ i ] = (float)ModelViewProjection.data[ i ];
+            MVPMatrixGL.m_data[ i ] = (float)ModelViewProjection.m_data[ i ];
         }
 
         return MVPMatrixGL;
@@ -82,22 +82,22 @@ namespace glt
         mat::Matrix4 const rotationMat =
         {
             {
-                xVec.x, xVec.y, xVec.z,    0.0,
-                i_up.x, i_up.y, i_up.z,    0.0,
-                zVec.x, zVec.y, zVec.z,    0.0,
-                   0.0,    0.0,    0.0,    1.0
+                xVec[ 0 ], xVec[ 1 ], xVec[ 2 ], 0.0,
+                i_up[ 0 ], i_up[ 1 ], i_up[ 2 ], 0.0,
+                zVec[ 0 ], zVec[ 1 ], zVec[ 2 ], 0.0,
+                      0.0,       0.0,       0.0, 1.0
             }
         };
 
         return rotationMat;
     }
 
-    mat::Matrix4 BuildTranslationMatrix( vec::Vector3 const& i_position )
+    mat::Matrix4 BuildViewTranslationMatrix( vec::Vector3 const& i_position )
     {
         mat::Matrix4 translationMat ( mat::k_identity );
-        translationMat( 3, 0 ) = i_position.x;
-        translationMat( 3, 1 ) = i_position.y;
-        translationMat( 3, 2 ) = i_position.z;
+        translationMat( 3, 0 ) = - i_position[ 0 ];
+        translationMat( 3, 1 ) = - i_position[ 1 ];
+        translationMat( 3, 2 ) = - i_position[ 2 ];
 
         return translationMat;
     }

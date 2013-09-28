@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/196920952/MVPMatrix.o \
+	${OBJECTDIR}/src/Frame.o \
 	${OBJECTDIR}/src/GLMatrix.o \
 	${OBJECTDIR}/src/MatrixStack.o \
 	${OBJECTDIR}/src/Model.o \
@@ -74,6 +75,11 @@ ${OBJECTDIR}/_ext/196920952/MVPMatrix.o: /C/Users/JoPe/Documents/NetBeansProject
 	${MKDIR} -p ${OBJECTDIR}/_ext/196920952
 	${RM} $@.d
 	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/_ext/196920952/MVPMatrix.o /C/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp
+
+${OBJECTDIR}/src/Frame.o: src/Frame.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src
+	${RM} $@.d
+	$(COMPILE.cc) -g -Wall -Iinclude -I../libmatrix/include -I../libvector/include -I/C/lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/Frame.o src/Frame.cpp
 
 ${OBJECTDIR}/src/GLMatrix.o: src/GLMatrix.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
