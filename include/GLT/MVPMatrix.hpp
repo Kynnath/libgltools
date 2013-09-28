@@ -33,6 +33,9 @@ namespace glt
             mat::Matrix4 ViewMatrix;
             mat::Matrix4 ProjectionMatrix;
     };
+
+    mat::Matrix4 BuildRotationMatrix( vec::Vector3 const& i_forward, vec::Vector3 const& i_up );
+    mat::Matrix4 BuildTranslationMatrix( vec::Vector3 const& i_position );
 }
 
 #endif	/* MVPMATRIX_HPP */
