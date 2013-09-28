@@ -52,7 +52,7 @@ namespace glt
 
     void MVPMatrix::SetView( vec::Vector3 const& i_position, vec::Vector3 const& i_forward, vec::Vector3 const& i_up )
     {
-        mat::Matrix4 const rotationMat ( BuildRotationMatrix( i_forward, i_up ) );
+        mat::Matrix4 const rotationMat ( BuildViewRotationMatrix( i_forward, i_up ) );
         mat::Matrix4 const translationMat ( BuildTranslationMatrix( i_position ) );
 
         ViewMatrix = mat::Multiply( rotationMat, translationMat );
@@ -74,7 +74,7 @@ namespace glt
         return MVPMatrixGL;
     }
 
-    mat::Matrix4 BuildRotationMatrix( vec::Vector3 const& i_forward, vec::Vector3 const& i_up )
+    mat::Matrix4 BuildViewRotationMatrix( vec::Vector3 const& i_forward, vec::Vector3 const& i_up )
     {
         vec::Vector3 const zVec ( vec::Scale( i_forward, -1.0 ) );
         vec::Vector3 const xVec ( vec::CrossProduct( i_up, zVec ) );
