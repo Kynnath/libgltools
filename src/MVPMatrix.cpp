@@ -8,6 +8,7 @@
 #include "GLT/MVPMatrix.hpp"
 
 #include <cmath>
+#include "VEC/Vector3.hpp"
 
 namespace glt
 {
@@ -49,8 +50,57 @@ namespace glt
         ProjectionMatrix[ 15 ] = 0.0;
     }
 
-    void MVPMatrix::SetView( vec::Vector3 const& i_position, vec::Vector3 const& i_direction, vec::Vector3 const& i_up )
-    {}
+    void MVPMatrix::SetView( vec::Vector3 const& i_position, vec::Vector3 const& i_forward, vec::Vector3 const& i_up )
+    {
+        /*M3DVector3f x, z;
+
+			// Make rotation matrix
+			// Z vector is reversed
+			z[0] = -vForward[0];
+			z[1] = -vForward[1];
+			z[2] = -vForward[2];*/
+        vec::Vector3 const zVec ( vec::Scale( i_forward, -1.0 ) );
+        vec::Vector3 const xVec ( vec::CrossProduct( i_up, zVec ) );
+/*
+			// X vector = Y cross Z
+			m3dCrossProduct3(x, vUp, z);
+
+			// Matrix has no translation information and is
+			// transposed.... (rows instead of columns)
+			#define M(row,col)  m[col*4+row]
+			   M(0, 0) = x[0];
+			   M(0, 1) = x[1];
+			   M(0, 2) = x[2];
+			   M(0, 3) = 0.0;
+			   M(1, 0) = vUp[0];
+			   M(1, 1) = vUp[1];
+			   M(1, 2) = vUp[2];
+			   M(1, 3) = 0.0;
+			   M(2, 0) = z[0];
+			   M(2, 1) = z[1];
+			   M(2, 2) = z[2];
+			   M(2, 3) = 0.0;
+			   M(3, 0) = 0.0;
+			   M(3, 1) = 0.0;
+			   M(3, 2) = 0.0;
+			   M(3, 3) = 1.0;
+			#undef M
+
+
+            if(bRotationOnly)
+                return;
+
+            // Apply translation too
+            M3DMatrix44f trans, M;
+            m3dTranslationMatrix44(trans, -vOrigin[0], -vOrigin[1], -vOrigin[2]);
+
+            m3dMatrixMultiply44(M, m, trans);
+
+            // Copy result back into m
+            memcpy(m, M, sizeof(float)*16);
+            }*/
+
+    }
 
     GLMatrix MVPMatrix::BuildMVPMatrix() const
     {

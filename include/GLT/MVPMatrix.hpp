@@ -10,19 +10,14 @@
 
 #include "GLT/GLMatrix.hpp"
 #include "MAT/Matrix4.hpp"
-#include "VEC/Vector3.hpp"
+
+namespace vec
+{
+    struct Vector3;
+}
 
 namespace glt
 {
-    struct ViewVectors
-    {
-        vec::Vector3 position;
-        vec::Vector3 forward;
-        vec::Vector3 up;
-
-        mat::Matrix4 BuildViewMatrix();
-    };
-
     class MVPMatrix
     {
         public:
@@ -30,7 +25,7 @@ namespace glt
             void Reset();
             void SetOrthographicProjection( double const& i_xMin, double const& i_xMax, double const& i_yMin, double const& i_yMax, double const& i_zMin, double const& i_zMax);
             void SetPerspectiveProjection( double const& i_fieldOfView, double const& i_aspectRatio, double const& i_zMin, double const& i_zMax );
-            void SetView( vec::Vector3 const& i_position, vec::Vector3 const& i_direction, vec::Vector3 const& i_up );
+            void SetView( vec::Vector3 const& i_position, vec::Vector3 const& i_forward, vec::Vector3 const& i_up );
             GLMatrix BuildMVPMatrix() const;
 
         protected:
