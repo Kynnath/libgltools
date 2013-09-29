@@ -76,7 +76,7 @@ namespace glt
         assert( checkLink != GL_FALSE );
 #endif //NDEBUG
 
-        Shader const shader = { programID };
+        Shader const shader = { programID, (GLuint)glGetUniformLocation( programID, "mvpMatrix" ) };
 
         return shader;
     }

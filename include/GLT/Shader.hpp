@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Shader.hpp
  * Author: juan.garibotti
  *
@@ -12,11 +12,12 @@
 
 namespace glt
 {
-    struct Shader 
+    struct Shader
     {
-        GLuint m_shaderID;        
+        GLuint m_shaderID;
+        GLuint m_mvpLocation;
     };
-    
+
     Shader LoadShaderCode( char const* i_vertexProgram, char const* i_fragmentProgram );
 }
 
