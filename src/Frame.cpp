@@ -32,8 +32,8 @@ namespace glt
         mat::Matrix4 translationMat ( mat::k_identity );
 
         translationMat( 3, 0 ) = m_position[ 0 ];
-        translationMat( 3, 1 ) = m_position[ 0 ];
-        translationMat( 3, 2 ) = m_position[ 0 ];
+        translationMat( 3, 1 ) = m_position[ 1 ];
+        translationMat( 3, 2 ) = m_position[ 2 ];
 
         return translationMat;
     }
