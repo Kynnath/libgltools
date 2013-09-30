@@ -16,8 +16,8 @@ namespace glt
 {
     struct Model
     {
-        std::vector< Vertex > vertexList;
-        std::vector< GLuint > indexList;
+        std::vector< Vertex > m_vertexList;
+        std::vector< GLuint > m_indexList;
     };
 }
 

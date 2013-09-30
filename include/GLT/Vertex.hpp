@@ -14,9 +14,14 @@ namespace glt
 {
     struct Vertex
     {
-        GLfloat x;
-        GLfloat y;
-        GLfloat z;
+        enum
+        {
+            Position = 0,
+            Color,
+            Count,
+        };
+        GLfloat m_position[ 3 ];
+        GLfloat m_color[ 3 ];
     };
 }
 
