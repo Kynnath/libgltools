@@ -48,8 +48,8 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>src</Elem>
-    <Elem>include/GLT</Elem>
+    <Elem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\src</Elem>
+    <Elem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\include\GLT</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -61,6 +61,9 @@
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
+        <cTool>
+          <warningLevel>2</warningLevel>
+        </cTool>
         <ccTool>
           <standard>8</standard>
           <incDir>
@@ -69,6 +72,9 @@
             <pElem>../libvector/include</pElem>
             <pElem>C:/lib/glew-1.10.0/include</pElem>
           </incDir>
+          <preprocessorList>
+            <Elem>GLEW_STATIC</Elem>
+          </preprocessorList>
           <warningLevel>2</warningLevel>
         </ccTool>
         <archiverTool>
@@ -124,7 +130,9 @@
       </toolsSet>
       <compileType>
         <cTool>
-          <developmentMode>5</developmentMode>
+          <developmentMode>6</developmentMode>
+          <stripSymbols>true</stripSymbols>
+          <warningLevel>2</warningLevel>
         </cTool>
         <ccTool>
           <developmentMode>6</developmentMode>
@@ -137,6 +145,7 @@
             <pElem>C:/lib/glew-1.10.0/include</pElem>
           </incDir>
           <preprocessorList>
+            <Elem>GLEW_STATIC</Elem>
             <Elem>NDEBUG</Elem>
           </preprocessorList>
           <warningLevel>2</warningLevel>
