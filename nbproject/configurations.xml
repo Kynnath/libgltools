@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="89">
+<configurationDescriptor version="90">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
@@ -27,7 +27,7 @@
         <itemPath>src/Frame.cpp</itemPath>
         <itemPath>src/GLMatrix.cpp</itemPath>
         <itemPath>src/GeometryTransform.cpp</itemPath>
-        <itemPath>C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp</itemPath>
+        <itemPath>src/MVPMatrix.cpp</itemPath>
         <itemPath>src/MatrixStack.cpp</itemPath>
         <itemPath>src/Model.cpp</itemPath>
         <itemPath>src/Shader.cpp</itemPath>
@@ -48,44 +48,35 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\src</Elem>
-    <Elem>C:\Users\JoPe\Documents\NetBeansProjects\libgltools\include\GLT</Elem>
+    <Elem>src</Elem>
+    <Elem>include</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="3">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
-        <cTool>
-          <warningLevel>2</warningLevel>
-        </cTool>
         <ccTool>
           <standard>8</standard>
           <incDir>
             <pElem>include</pElem>
             <pElem>../libmatrix/include</pElem>
+            <pElem>../libobj/include</pElem>
             <pElem>../libvector/include</pElem>
-            <pElem>C:/lib/glew-1.10.0/include</pElem>
+            <pElem>E:/lib/glew-1.10.0/include</pElem>
+            <pElem>../../../../../lib/glew-1.10.0/include</pElem>
           </incDir>
-          <preprocessorList>
-            <Elem>GLEW_STATIC</Elem>
-          </preprocessorList>
+          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wpadded -Wredundant-decls -Wunreachable-code</commandLine>
           <warningLevel>2</warningLevel>
         </ccTool>
         <archiverTool>
           <output>lib/liblibgltools-d.a</output>
         </archiverTool>
       </compileType>
-      <item path="C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
       <item path="include/GLT/Frame.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
@@ -109,6 +100,8 @@
       <item path="src/GLMatrix.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GeometryTransform.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MVPMatrix.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/MatrixStack.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -123,32 +116,16 @@
     </conf>
     <conf name="Release" type="3">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <cTool>
-          <developmentMode>6</developmentMode>
-          <stripSymbols>true</stripSymbols>
-          <warningLevel>2</warningLevel>
+          <developmentMode>5</developmentMode>
         </cTool>
         <ccTool>
-          <developmentMode>6</developmentMode>
-          <stripSymbols>true</stripSymbols>
-          <standard>8</standard>
-          <incDir>
-            <pElem>include</pElem>
-            <pElem>../libmatrix/include</pElem>
-            <pElem>../libvector/include</pElem>
-            <pElem>C:/lib/glew-1.10.0/include</pElem>
-          </incDir>
-          <preprocessorList>
-            <Elem>GLEW_STATIC</Elem>
-            <Elem>NDEBUG</Elem>
-          </preprocessorList>
-          <warningLevel>2</warningLevel>
+          <developmentMode>5</developmentMode>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -157,14 +134,8 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <archiverTool>
-          <output>lib/liblibgltools.a</output>
         </archiverTool>
       </compileType>
-      <item path="C:/Users/JoPe/Documents/NetBeansProjects/libgltools/src/MVPMatrix.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
       <item path="include/GLT/Frame.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
@@ -188,6 +159,8 @@
       <item path="src/GLMatrix.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GeometryTransform.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/MVPMatrix.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/MatrixStack.cpp" ex="false" tool="1" flavor2="0">
       </item>

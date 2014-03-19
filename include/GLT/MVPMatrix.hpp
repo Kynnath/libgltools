@@ -29,9 +29,9 @@ namespace glt
             GLMatrix BuildMVPMatrix() const;
 
         protected:
-            mat::Matrix4 ModelMatrix;
-            mat::Matrix4 ViewMatrix;
-            mat::Matrix4 ProjectionMatrix;
+            mat::Matrix4 m_modelMatrix;
+            mat::Matrix4 m_viewMatrix;
+            mat::Matrix4 m_projectionMatrix;
     };
 
     mat::Matrix4 BuildViewRotationMatrix( vec::Vector3 const& i_forward, vec::Vector3 const& i_up );

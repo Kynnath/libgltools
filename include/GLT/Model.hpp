@@ -10,6 +10,7 @@
 
 #include <vector>
 #include "GL/glew.h"
+#include "OBJ/Object.hpp"
 #include "Vertex.hpp"
 
 namespace glt
@@ -18,6 +19,9 @@ namespace glt
     {
         std::vector< Vertex > m_vertexList;
         std::vector< GLuint > m_indexList;
+
+        Model() = default;
+        Model( obj::Object const& i_object );
     };
 }
 

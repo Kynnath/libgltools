@@ -13,7 +13,7 @@ namespace glt
     {
         for ( int index = 0; index < 16; ++index )
         {
-            m_data[ index ] = (float) i_matrix[ index ];
+            m_data[ (long long unsigned int)index ] = (float) i_matrix[ index ];
         }
     }
 }

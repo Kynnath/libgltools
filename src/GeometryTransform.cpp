@@ -40,7 +40,7 @@ namespace glt
     {
         m_projectionMatrix.SetIdentity();
 
-        double const yMax = i_zMin * tanf( i_fieldOfView * 0.5 );
+        double const yMax = i_zMin * tan( i_fieldOfView * 0.5 );
         double const yMin = - yMax;
         double const xMin = yMin * i_aspectRatio;
         double const xMax = - xMin;

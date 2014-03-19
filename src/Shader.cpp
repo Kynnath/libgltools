@@ -37,7 +37,7 @@ namespace glt
             GLint lengthLog ( 0 );
             glGetShaderiv( vertexShader, GL_INFO_LOG_LENGTH, &lengthLog );
             std::vector< char > compilerLog;
-            compilerLog.resize( lengthLog, 0 );
+            compilerLog.resize( (long long unsigned int)lengthLog, 0 );
             glGetShaderInfoLog( vertexShader, lengthLog, NULL, compilerLog.data() );
             std::cout << compilerLog.data() << std::endl;
         }
@@ -49,7 +49,7 @@ namespace glt
             GLint lengthLog ( 0 );
             glGetShaderiv( fragmentShader, GL_INFO_LOG_LENGTH, &lengthLog );
             std::vector< char > compilerLog;
-            compilerLog.resize( lengthLog, 0 );
+            compilerLog.resize( (long long unsigned int)lengthLog, 0 );
             glGetShaderInfoLog( fragmentShader, lengthLog, NULL, compilerLog.data() );
             std::cout << compilerLog.data() << std::endl;
         }
@@ -69,7 +69,7 @@ namespace glt
             GLint lengthLog ( 0 );
             glGetProgramiv( programID, GL_INFO_LOG_LENGTH, &lengthLog );
             std::vector< char > linkerLog;
-            linkerLog.resize( lengthLog, 0 );
+            linkerLog.resize( (long long unsigned int)lengthLog, 0 );
             glGetProgramInfoLog( programID, lengthLog, NULL, linkerLog.data() );
             std::cout << linkerLog.data() << std::endl;
         }

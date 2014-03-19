@@ -5,9 +5,10 @@
  * Created on 1 de septiembre de 2013, 20:19
  */
 
-#ifndef VERTEX_HPP
-#define	VERTEX_HPP
+#ifndef GLT_VERTEX_HPP
+#define	GLT_VERTEX_HPP
 
+#include <array>
 #include "GL/glew.h"
 
 namespace glt
@@ -17,12 +18,14 @@ namespace glt
         enum
         {
             Position = 0,
-            Color,
-            Count,
+            Color
         };
-        GLfloat m_position[ 3 ];
-        GLfloat m_color[ 3 ];
+        std::array<GLfloat,3> m_position;
+        std::array<GLfloat,3> m_color;
     };
+
+    bool operator==( Vertex const& lhs, Vertex const& rhs );
+    bool operator!=( Vertex const& lhs, Vertex const& rhs );
 }
 
 #endif	/* VERTEX_HPP */
