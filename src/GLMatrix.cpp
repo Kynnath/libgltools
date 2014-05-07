@@ -7,6 +7,8 @@
 
 #include "GLT/GLMatrix.hpp"
 
+#include "MAT/Matrix4.hpp"
+
 namespace glt
 {
     GLMatrix::GLMatrix( mat::Matrix4 const& i_matrix )

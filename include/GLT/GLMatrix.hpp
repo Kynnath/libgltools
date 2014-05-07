@@ -10,7 +10,11 @@
 
 #include <array>
 #include "GL/glew.h"
-#include "MAT/Matrix4.hpp"
+
+namespace mat
+{
+    struct Matrix4;
+}
 
 namespace glt
 {
