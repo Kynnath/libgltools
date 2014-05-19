@@ -18,10 +18,12 @@ namespace glt
         enum
         {
             Position = 0,
-            Color
+            Color,
+            Texture
         };
         std::array<GLfloat,3> m_position;
         std::array<GLfloat,3> m_color;
+        std::array<GLfloat,2> m_texture;
     };
 
     bool operator==( Vertex const& lhs, Vertex const& rhs );
