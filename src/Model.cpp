@@ -27,6 +27,10 @@ namespace glt
             {
                 Vertex vertex;
                 memcpy( &vertex.m_position, &i_object.m_coordinatesList[ (unsigned int)face.m_coordinates[(unsigned int)vertexIndex]-1 ].m_data, sizeof(vertex.m_position) );
+                if ( face.m_texture[ (unsigned int)vertexIndex ] != 0 )
+                {
+                    memcpy( &vertex.m_texture, &i_object.m_textureList[ (unsigned int)face.m_texture[(unsigned int)vertexIndex]-1 ].m_data, sizeof(vertex.m_texture) );
+                }
 
                 std::vector<Vertex>::const_iterator searchResult ( std::find( m_vertexList.begin(), m_vertexList.end(), vertex ) );
                 if ( searchResult != m_vertexList.end() )
