@@ -13,8 +13,8 @@ CND_BUILDDIR=build
 CND_DLIB_EXT=dll
 NBTMPDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=lib/liblibgltools-d.a
-OUTPUT_BASENAME=liblibgltools-d.a
+OUTPUT_PATH=${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
+OUTPUT_BASENAME=liblibgltools.a
 PACKAGE_TOP_DIR=libgltools/
 
 # Functions
