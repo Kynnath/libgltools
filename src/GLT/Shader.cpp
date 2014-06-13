@@ -7,7 +7,7 @@
 
 #include <cassert>
 #include <vector>
-#include "GLT/Shader.hpp"
+#include "Shader.hpp"
 
 #ifndef NDEBUG
 #include <iostream>

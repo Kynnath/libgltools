@@ -5,7 +5,7 @@
  * Created on 18 de septiembre de 2013, 22:35
  */
 
-#include "GLT/MatrixStack.hpp"
+#include "MatrixStack.hpp"
 
 namespace glt
 {

@@ -8,8 +8,8 @@
 #ifndef MVPMATRIX_HPP
 #define	MVPMATRIX_HPP
 
-#include "GLT/GLMatrix.hpp"
 #include "MAT/Matrix4.hpp"
+#include "GLMatrix.hpp"
 
 namespace vec
 {

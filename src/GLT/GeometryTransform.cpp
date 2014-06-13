@@ -5,7 +5,7 @@
  * Created on 28 de septiembre de 2013, 15:26
  */
 
-#include "GLT/GeometryTransform.hpp"
+#include "GeometryTransform.hpp"
 
 #include <cmath>
 

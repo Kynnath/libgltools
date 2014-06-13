@@ -35,15 +35,15 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/src/Frame.o \
-	${OBJECTDIR}/src/GLMatrix.o \
-	${OBJECTDIR}/src/GeometryTransform.o \
-	${OBJECTDIR}/src/MVPMatrix.o \
-	${OBJECTDIR}/src/MatrixStack.o \
-	${OBJECTDIR}/src/Model.o \
-	${OBJECTDIR}/src/Shader.o \
-	${OBJECTDIR}/src/Triangle.o \
-	${OBJECTDIR}/src/Vertex.o
+	${OBJECTDIR}/src/GLT/Frame.o \
+	${OBJECTDIR}/src/GLT/GLMatrix.o \
+	${OBJECTDIR}/src/GLT/GeometryTransform.o \
+	${OBJECTDIR}/src/GLT/MVPMatrix.o \
+	${OBJECTDIR}/src/GLT/MatrixStack.o \
+	${OBJECTDIR}/src/GLT/Model.o \
+	${OBJECTDIR}/src/GLT/Shader.o \
+	${OBJECTDIR}/src/GLT/Triangle.o \
+	${OBJECTDIR}/src/GLT/Vertex.o
 
 
 # C Compiler Flags
@@ -72,50 +72,50 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a: ${OBJECTFILES}
 	${AR} -rv ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a ${OBJECTFILES} 
 	$(RANLIB) ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a
 
-${OBJECTDIR}/src/Frame.o: src/Frame.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/Frame.o: src/GLT/Frame.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Frame.o src/Frame.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Frame.o src/GLT/Frame.cpp
 
-${OBJECTDIR}/src/GLMatrix.o: src/GLMatrix.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/GLMatrix.o: src/GLT/GLMatrix.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLMatrix.o src/GLMatrix.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/GLMatrix.o src/GLT/GLMatrix.cpp
 
-${OBJECTDIR}/src/GeometryTransform.o: src/GeometryTransform.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/GeometryTransform.o: src/GLT/GeometryTransform.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GeometryTransform.o src/GeometryTransform.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/GeometryTransform.o src/GLT/GeometryTransform.cpp
 
-${OBJECTDIR}/src/MVPMatrix.o: src/MVPMatrix.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/MVPMatrix.o: src/GLT/MVPMatrix.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MVPMatrix.o src/MVPMatrix.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/MVPMatrix.o src/GLT/MVPMatrix.cpp
 
-${OBJECTDIR}/src/MatrixStack.o: src/MatrixStack.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/MatrixStack.o: src/GLT/MatrixStack.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/MatrixStack.o src/MatrixStack.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/MatrixStack.o src/GLT/MatrixStack.cpp
 
-${OBJECTDIR}/src/Model.o: src/Model.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/Model.o: src/GLT/Model.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Model.o src/Model.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Model.o src/GLT/Model.cpp
 
-${OBJECTDIR}/src/Shader.o: src/Shader.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/Shader.o: src/GLT/Shader.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Shader.o src/Shader.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Shader.o src/GLT/Shader.cpp
 
-${OBJECTDIR}/src/Triangle.o: src/Triangle.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/Triangle.o: src/GLT/Triangle.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Triangle.o src/Triangle.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Triangle.o src/GLT/Triangle.cpp
 
-${OBJECTDIR}/src/Vertex.o: src/Vertex.cpp 
-	${MKDIR} -p ${OBJECTDIR}/src
+${OBJECTDIR}/src/GLT/Vertex.o: src/GLT/Vertex.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/Vertex.o src/Vertex.cpp
+	$(COMPILE.cc) -O2 -Wall -s -Iinclude -I../libmatrix/include -I../libobj/include -I../libvector/include -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Vertex.o src/GLT/Vertex.cpp
 
 # Subprojects
 .build-subprojects:

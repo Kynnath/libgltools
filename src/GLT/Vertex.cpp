@@ -5,7 +5,7 @@
  * Created on 1 de septiembre de 2013, 20:19
  */
 
-#include "GLT/Vertex.hpp"
+#include "Vertex.hpp"
 
 #include <cstring>
 

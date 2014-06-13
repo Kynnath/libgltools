@@ -8,9 +8,9 @@
 #ifndef GEOMETRYTRANSFORM_HPP
 #define	GEOMETRYTRANSFORM_HPP
 
-#include "GLT/Frame.hpp"
-#include "GLT/GLMatrix.hpp"
 #include "MAT/Matrix4.hpp"
+#include "Frame.hpp"
+#include "GLMatrix.hpp"
 
 namespace glt
 {

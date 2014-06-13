@@ -5,7 +5,7 @@
  * Created on 28 de septiembre de 2013, 11:02
  */
 
-#include "GLT/Frame.hpp"
+#include "Frame.hpp"
 
 namespace glt
 {

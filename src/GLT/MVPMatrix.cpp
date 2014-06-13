@@ -5,7 +5,7 @@
  * Created on 22 de septiembre de 2013, 17:43
  */
 
-#include "GLT/MVPMatrix.hpp"
+#include "MVPMatrix.hpp"
 
 #include <cmath>
 #include "VEC/Vector3.hpp"
