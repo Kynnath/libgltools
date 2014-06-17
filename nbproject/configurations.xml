@@ -4,17 +4,16 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <logicalFolder name="GLT" displayName="GLT" projectFiles="true">
-        <itemPath>include/GLT/Frame.hpp</itemPath>
-        <itemPath>include/GLT/GLMatrix.hpp</itemPath>
-        <itemPath>include/GLT/GeometryTransform.hpp</itemPath>
-        <itemPath>include/GLT/MVPMatrix.hpp</itemPath>
-        <itemPath>include/GLT/MatrixStack.hpp</itemPath>
-        <itemPath>include/GLT/Model.hpp</itemPath>
-        <itemPath>include/GLT/Shader.hpp</itemPath>
-        <itemPath>include/GLT/Triangle.hpp</itemPath>
-        <itemPath>include/GLT/Vertex.hpp</itemPath>
-      </logicalFolder>
+      <itemPath>src/GLT/Frame.hpp</itemPath>
+      <itemPath>src/GLT/GLMatrix.hpp</itemPath>
+      <itemPath>src/GLT/GeometryTransform.hpp</itemPath>
+      <itemPath>src/GLT/MVPMatrix.hpp</itemPath>
+      <itemPath>src/GLT/MatrixStack.hpp</itemPath>
+      <itemPath>src/GLT/Model.hpp</itemPath>
+      <itemPath>src/GLT/Shader.hpp</itemPath>
+      <itemPath>src/GLT/Texture.hpp</itemPath>
+      <itemPath>src/GLT/Triangle.hpp</itemPath>
+      <itemPath>src/GLT/Vertex.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -24,23 +23,15 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>src/GLT/Frame.cpp</itemPath>
-      <itemPath>src/GLT/Frame.hpp</itemPath>
       <itemPath>src/GLT/GLMatrix.cpp</itemPath>
-      <itemPath>src/GLT/GLMatrix.hpp</itemPath>
       <itemPath>src/GLT/GeometryTransform.cpp</itemPath>
-      <itemPath>src/GLT/GeometryTransform.hpp</itemPath>
       <itemPath>src/GLT/MVPMatrix.cpp</itemPath>
-      <itemPath>src/GLT/MVPMatrix.hpp</itemPath>
       <itemPath>src/GLT/MatrixStack.cpp</itemPath>
-      <itemPath>src/GLT/MatrixStack.hpp</itemPath>
       <itemPath>src/GLT/Model.cpp</itemPath>
-      <itemPath>src/GLT/Model.hpp</itemPath>
       <itemPath>src/GLT/Shader.cpp</itemPath>
-      <itemPath>src/GLT/Shader.hpp</itemPath>
+      <itemPath>src/GLT/Texture.cpp</itemPath>
       <itemPath>src/GLT/Triangle.cpp</itemPath>
-      <itemPath>src/GLT/Triangle.hpp</itemPath>
       <itemPath>src/GLT/Vertex.cpp</itemPath>
-      <itemPath>src/GLT/Vertex.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -72,35 +63,18 @@
             <pElem>include</pElem>
             <pElem>../libmatrix/include</pElem>
             <pElem>../libobj/include</pElem>
-            <pElem>../libvector/include</pElem>
+            <pElem>../libvector/src</pElem>
             <pElem>E:/lib/glew-1.10.0/include</pElem>
             <pElem>../../../../../lib/glew-1.10.0/include</pElem>
+            <pElem>../libtga/src</pElem>
           </incDir>
-          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wpadded -Wredundant-decls -Wunreachable-code</commandLine>
+          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code</commandLine>
           <warningLevel>2</warningLevel>
         </ccTool>
         <archiverTool>
           <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a</output>
         </archiverTool>
       </compileType>
-      <item path="include/GLT/Frame.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/GeometryTransform.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/MVPMatrix.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/MatrixStack.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Model.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Shader.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Triangle.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Vertex.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="src/GLT/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GLT/Frame.hpp" ex="false" tool="3" flavor2="0">
@@ -128,6 +102,10 @@
       <item path="src/GLT/Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GLT/Shader.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/GLT/Texture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GLT/Texture.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/GLT/Triangle.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -156,11 +134,12 @@
             <pElem>include</pElem>
             <pElem>../libmatrix/include</pElem>
             <pElem>../libobj/include</pElem>
-            <pElem>../libvector/include</pElem>
+            <pElem>../libvector/src</pElem>
             <pElem>E:/lib/glew-1.10.0/include</pElem>
             <pElem>../../../../../lib/glew-1.10.0/include</pElem>
+            <pElem>../libtga/src</pElem>
           </incDir>
-          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wpadded -Wredundant-decls -Wunreachable-code</commandLine>
+          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code</commandLine>
           <warningLevel>2</warningLevel>
         </ccTool>
         <fortranCompilerTool>
@@ -173,24 +152,6 @@
           <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a</output>
         </archiverTool>
       </compileType>
-      <item path="include/GLT/Frame.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/GLMatrix.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/GeometryTransform.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/MVPMatrix.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/MatrixStack.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Model.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Shader.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Triangle.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="include/GLT/Vertex.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="src/GLT/Frame.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GLT/Frame.hpp" ex="false" tool="3" flavor2="0">
@@ -218,6 +179,10 @@
       <item path="src/GLT/Shader.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GLT/Shader.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/GLT/Texture.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GLT/Texture.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="src/GLT/Triangle.cpp" ex="false" tool="1" flavor2="0">
       </item>

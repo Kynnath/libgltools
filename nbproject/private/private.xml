@@ -6,6 +6,23 @@
     </data>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Shader.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Vertex.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Vertex.hpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/MatrixStack.hpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Triangle.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Frame.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/GeometryTransform.hpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/MVPMatrix.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Model.hpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Triangle.hpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/MVPMatrix.hpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/GLMatrix.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Shader.hpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/Model.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/GeometryTransform.cpp</file>
+            <file>file:/C:/Users/juan.garibotti/Documents/NetBeansProjects/libgltools/src/GLT/MatrixStack.cpp</file>
+        </group>
     </open-files>
 </project-private>
