@@ -45,9 +45,6 @@
       <itemPath>Makefile</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>src</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="3">
@@ -60,7 +57,6 @@
         <ccTool>
           <standard>8</standard>
           <incDir>
-            <pElem>include</pElem>
             <pElem>../libmatrix/include</pElem>
             <pElem>../libobj/include</pElem>
             <pElem>../libvector/src</pElem>
