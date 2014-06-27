@@ -17,6 +17,8 @@ namespace tga
 
 namespace glt
 {
+    class Image;
+
     struct TextureSettings
     {
         GLint m_mipMapLevel;
@@ -24,7 +26,10 @@ namespace glt
         GLint m_filterQuality;
         bool m_generateMipMap;
 
-        TextureSettings();
+        TextureSettings( GLint const& i_mipMapLevel     = 0,
+                         GLint const& i_wrapMode        = GL_CLAMP_TO_EDGE,
+                         GLint const& i_filterQuality   = GL_LINEAR,
+                         bool i_generateMipMap          = false );
     };
 
     class Texture
@@ -32,19 +37,17 @@ namespace glt
         static GLenum const sk_target;
         static GLint const sk_border;
         GLuint m_name;
-        GLsizei m_width;
-        GLsizei m_height;
+
+        Texture( Texture const& i_texture );
+        Texture & operator=( Texture c_texture );
 
         public:
+            Texture( Image const& i_image, TextureSettings const& i_settings = TextureSettings() );
             Texture( tga::Image c_image, TextureSettings const& i_settings = TextureSettings() );
             Texture( Texture && io_texture );
             ~Texture();
 
             GLuint const& Name() const;
-
-        private:
-            Texture( Texture const& i_texture );
-            Texture & operator=( Texture c_texture );
     };
 }
 #endif	/* TEXTURE_HPP */

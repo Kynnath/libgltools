@@ -38,6 +38,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/GLT/Frame.o \
 	${OBJECTDIR}/src/GLT/GLMatrix.o \
 	${OBJECTDIR}/src/GLT/GeometryTransform.o \
+	${OBJECTDIR}/src/GLT/Image.o \
 	${OBJECTDIR}/src/GLT/MVPMatrix.o \
 	${OBJECTDIR}/src/GLT/MatrixStack.o \
 	${OBJECTDIR}/src/GLT/Model.o \
@@ -87,6 +88,11 @@ ${OBJECTDIR}/src/GLT/GeometryTransform.o: src/GLT/GeometryTransform.cpp
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -Wall -s -I../libmatrix/src -I../libobj/src -I../libvector/src -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -I../libtga/src -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/GeometryTransform.o src/GLT/GeometryTransform.cpp
+
+${OBJECTDIR}/src/GLT/Image.o: src/GLT/Image.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -Wall -s -I../libmatrix/src -I../libobj/src -I../libvector/src -I/E/lib/glew-1.10.0/include -I../../../../../lib/glew-1.10.0/include -I../libtga/src -std=c++11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Image.o src/GLT/Image.cpp
 
 ${OBJECTDIR}/src/GLT/MVPMatrix.o: src/GLT/MVPMatrix.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
