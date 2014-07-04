@@ -26,28 +26,18 @@ namespace glt
     GLenum const Texture::sk_target = GL_TEXTURE_2D;
     GLint const Texture::sk_border = 0;
 
-    static GLint GLFormatToInternalFormat( GLenum const& i_format )
-    {
-        switch ( i_format )
-        {
-            case GL_RGBA:   return 4;
-            case GL_RGB:    return 3;
-            case GL_RG:     return 2;
-            case GL_RED:    return 1;
-            default:        throw 0;
-        }
-    }
+    Texture::Texture()
+        : m_name { 0 }
+    {}
 
     Texture::Texture( Image const& i_image, TextureSettings const& i_settings )
     {
         glGenTextures( 1, &m_name );
         glBindTexture( sk_target, m_name );
 
-        auto const internalFormat = GLFormatToInternalFormat( i_image.Description().m_format );
-
         glTexImage2D( sk_target,
                       i_settings.m_mipMapLevel,
-                      internalFormat,
+                      static_cast<GLint>(i_image.Description().m_format),
                       i_image.Description().m_width, i_image.Description().m_height,
                       sk_border,
                       i_image.Description().m_format,
@@ -86,7 +76,6 @@ namespace glt
         glBindTexture( sk_target, m_name );
 
         auto const glFormat = tgaFormatToGLFormat( c_image.GetPixelFormat() );
-        auto const internalFormat = GLFormatToInternalFormat( glFormat );
         auto const dataType = GL_UNSIGNED_BYTE;
         if ( glFormat == GL_RG || glFormat == GL_RGBA )
         {
@@ -95,7 +84,7 @@ namespace glt
 
         glTexImage2D( sk_target,
                       i_settings.m_mipMapLevel,
-                      internalFormat,
+                      static_cast<GLint>(glFormat),
                       c_image.GetWidth(), c_image.GetHeight(),
                       sk_border,
                       glFormat,
@@ -117,9 +106,18 @@ namespace glt
     }
 
     Texture::Texture( Texture && io_texture )
-        : m_name    { io_texture.m_name }
+        : m_name { io_texture.m_name }
     {
         io_texture.m_name = 0;
+    }
+
+    Texture & Texture::operator=( Texture && io_texture )
+    {
+        glDeleteTextures( 1, &m_name );
+        m_name = io_texture.m_name;
+        io_texture.m_name = 0;
+
+        return *this;
     }
 
     Texture::~Texture()

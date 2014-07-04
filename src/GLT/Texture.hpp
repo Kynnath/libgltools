@@ -38,13 +38,14 @@ namespace glt
         static GLint const sk_border;
         GLuint m_name;
 
-        Texture( Texture const& i_texture );
-        Texture & operator=( Texture c_texture );
+        Texture( Texture const& i_texture ) = delete;
 
         public:
+            Texture();
             Texture( Image const& i_image, TextureSettings const& i_settings = TextureSettings() );
             Texture( tga::Image c_image, TextureSettings const& i_settings = TextureSettings() );
             Texture( Texture && io_texture );
+            Texture & operator=( Texture && io_texture );
             ~Texture();
 
             GLuint const& Name() const;

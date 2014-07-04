@@ -10,9 +10,12 @@
 
 #include <vector>
 #include "GL/glew.h"
-#include "OBJ/Object.hpp"
 #include "Vertex.hpp"
 
+namespace obj
+{
+    class Object;
+}
 namespace glt
 {
     struct Model

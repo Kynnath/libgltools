@@ -9,6 +9,7 @@
 
 #include <algorithm>
 #include <cstring>
+#include "OBJ/Object.hpp"
 
 namespace glt
 {
