@@ -58,7 +58,6 @@
       <compileType>
         <ccTool>
           <architecture>2</architecture>
-          <standard>8</standard>
           <incDir>
             <pElem>../../../../../lib/glew-1.11.0/include</pElem>
             <pElem>../libmatrix/src</pElem>
@@ -66,7 +65,7 @@
             <pElem>../libvector/src</pElem>
             <pElem>../libtga/src</pElem>
           </incDir>
-          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code</commandLine>
+          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y</commandLine>
           <preprocessorList>
             <Elem>GLEW_STATIC</Elem>
           </preprocessorList>
@@ -135,7 +134,6 @@
           <developmentMode>5</developmentMode>
           <stripSymbols>true</stripSymbols>
           <architecture>2</architecture>
-          <standard>8</standard>
           <incDir>
             <pElem>../libmatrix/src</pElem>
             <pElem>../libobj/src</pElem>
@@ -144,7 +142,7 @@
             <pElem>../../../../../lib/glew-1.10.0/include</pElem>
             <pElem>../libtga/src</pElem>
           </incDir>
-          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code</commandLine>
+          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y</commandLine>
           <preprocessorList>
             <Elem>GLEW_STATIC</Elem>
           </preprocessorList>
