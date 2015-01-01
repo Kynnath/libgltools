@@ -39,6 +39,7 @@ namespace glt
         GLuint m_name;
 
         Texture( Texture const& i_texture ) = delete;
+        Texture & operator=( Texture const& i_texture ) = delete;
 
         public:
             Texture();
