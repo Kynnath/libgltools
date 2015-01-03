@@ -12,13 +12,21 @@
 
 namespace glt
 {
-    struct Shader
-    {
-        GLuint m_shaderID;
-        GLuint m_mvpLocation;
-    };
+  struct Shader
+  {
+    GLuint m_shaderID;
+    GLuint m_mvpLocation;
+    
+    Shader( GLuint shaderID, GLuint mvpLoc ) noexcept;
+    Shader( Shader && i_src ) noexcept;
+    Shader& operator=( Shader && i_src ) noexcept;
+    ~Shader() noexcept;
+    
+    Shader( Shader const& i_copy ) = delete;
+    Shader& operator=( Shader const& i_copyAssignment ) = delete;
+  };
 
-    Shader LoadShaderCode( char const* i_vertexProgram, char const* i_fragmentProgram );
+  Shader LoadShaderCode( char const* i_vertexProgram, char const* i_fragmentProgram );
 }
 
 #endif	/* SHADER_HPP */
