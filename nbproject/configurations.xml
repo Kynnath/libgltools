@@ -15,6 +15,7 @@
       <itemPath>src/GLT/Texture.hpp</itemPath>
       <itemPath>src/GLT/Triangle.hpp</itemPath>
       <itemPath>src/GLT/Vertex.hpp</itemPath>
+      <itemPath>src/GLT/VertexArray.hpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -34,6 +35,7 @@
       <itemPath>src/GLT/Texture.cpp</itemPath>
       <itemPath>src/GLT/Triangle.cpp</itemPath>
       <itemPath>src/GLT/Vertex.cpp</itemPath>
+      <itemPath>src/GLT/VertexArray.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -59,17 +61,17 @@
         <ccTool>
           <architecture>2</architecture>
           <incDir>
-            <pElem>../../../../../lib/glew-1.11.0/include</pElem>
+            <pElem>../../../lib/glew-1.12.0/include</pElem>
             <pElem>../libmatrix/src</pElem>
             <pElem>../libobj/src</pElem>
             <pElem>../libvector/src</pElem>
-            <pElem>../libtga/src</pElem>
+            <pElem>../libtools/src</pElem>
           </incDir>
-          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y</commandLine>
+          <commandLine>-std=c++14 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector</commandLine>
           <preprocessorList>
             <Elem>GLEW_STATIC</Elem>
           </preprocessorList>
-          <warningLevel>2</warningLevel>
+          <warningLevel>3</warningLevel>
         </ccTool>
         <archiverTool>
           <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a</output>
@@ -119,6 +121,10 @@
       </item>
       <item path="src/GLT/Vertex.hpp" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="src/GLT/VertexArray.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GLT/VertexArray.hpp" ex="false" tool="3" flavor2="0">
+      </item>
     </conf>
     <conf name="Release" type="3">
       <toolsSet>
@@ -135,18 +141,17 @@
           <stripSymbols>true</stripSymbols>
           <architecture>2</architecture>
           <incDir>
+            <pElem>../../../lib/glew-1.12.0/include</pElem>
             <pElem>../libmatrix/src</pElem>
             <pElem>../libobj/src</pElem>
             <pElem>../libvector/src</pElem>
-            <pElem>E:/lib/glew-1.10.0/include</pElem>
-            <pElem>../../../../../lib/glew-1.10.0/include</pElem>
-            <pElem>../libtga/src</pElem>
+            <pElem>../libtools/src</pElem>
           </incDir>
-          <commandLine>-Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y</commandLine>
+          <commandLine>-std=c++14 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector</commandLine>
           <preprocessorList>
             <Elem>GLEW_STATIC</Elem>
           </preprocessorList>
-          <warningLevel>2</warningLevel>
+          <warningLevel>3</warningLevel>
         </ccTool>
         <fortranCompilerTool>
           <developmentMode>5</developmentMode>
@@ -201,6 +206,10 @@
       <item path="src/GLT/Vertex.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/GLT/Vertex.hpp" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="src/GLT/VertexArray.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="src/GLT/VertexArray.hpp" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

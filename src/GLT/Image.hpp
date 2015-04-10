@@ -20,7 +20,7 @@ namespace glt
         GLenum m_format;
         GLenum m_type;
 
-        ImageDescription( GLsizei const& i_width, GLsizei const& i_height, GLenum const& i_format = GL_RED, GLenum const& i_type = GL_UNSIGNED_BYTE );
+        ImageDescription(GLsizei const& i_width, GLsizei const& i_height, GLenum const& i_format = GL_RED, GLenum const& i_type = GL_UNSIGNED_BYTE);
     };
 
     class Image
@@ -29,7 +29,7 @@ namespace glt
         std::unique_ptr<unsigned char[]> m_data;
 
         public:
-            Image( ImageDescription const& i_description, std::unique_ptr<unsigned char[]> c_data );
+            Image(ImageDescription const& i_description, std::unique_ptr<unsigned char[]> data);
             ImageDescription const& Description() const;
             unsigned char const* Data() const;
     };

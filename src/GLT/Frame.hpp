@@ -13,19 +13,19 @@
 
 namespace glt
 {
-    struct Frame
-    {
-        vec::Vector3 m_position;
-        vec::Vector3 m_forward;
-        vec::Vector3 m_up;
+  struct Frame
+  {
+    vec::Vector3 m_position;
+    vec::Vector3 m_forward;
+    vec::Vector3 m_up;
 
-        mat::Matrix4 BuildRotationMatrix() const;
-        mat::Matrix4 BuildTranslationMatrix() const;
-        mat::Matrix4 BuildViewRotationMatrix() const;
-        mat::Matrix4 BuildViewTranslationMatrix() const;
-        mat::Matrix4 BuildMatrix() const;
-        mat::Matrix4 BuildViewMatrix() const;
-    };
+    mat::Matrix4 BuildRotationMatrix() const;
+    mat::Matrix4 BuildTranslationMatrix() const;
+    mat::Matrix4 BuildViewRotationMatrix() const;
+    mat::Matrix4 BuildViewTranslationMatrix() const;
+    mat::Matrix4 BuildMatrix() const;
+    mat::Matrix4 BuildViewMatrix() const;
+  };
 }
 
 #endif	/* FRAME_HPP */

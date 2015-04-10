@@ -13,21 +13,28 @@
 
 namespace glt
 {
-    struct Vertex
+  struct Vertex
+  {
+    enum Attribute
     {
-        enum
-        {
-            Position = 0,
-            Color,
-            Texture
-        };
-        std::array<GLfloat,3> m_position;
-        std::array<GLfloat,3> m_color;
-        std::array<GLfloat,2> m_texture;
+      Position = 0,
+      Color,
+      Texture,
+      Attributes
     };
+    enum Offset
+    {
+      PositionOffset = 0,
+      ColorOffset = sizeof(GLfloat)*3,
+      TextureOffset = ColorOffset + sizeof(GLfloat)*3
+    };
+    std::array<GLfloat,3> m_position;
+    std::array<GLfloat,3> m_color;
+    std::array<GLfloat,2> m_texture;
+  };
 
-    bool operator==( Vertex const& lhs, Vertex const& rhs );
-    bool operator!=( Vertex const& lhs, Vertex const& rhs );
+  bool operator==( Vertex const& lhs, Vertex const& rhs );
+  bool operator!=( Vertex const& lhs, Vertex const& rhs );
 }
 
 #endif	/* VERTEX_HPP */

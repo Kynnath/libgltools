@@ -45,15 +45,16 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/GLT/Shader.o \
 	${OBJECTDIR}/src/GLT/Texture.o \
 	${OBJECTDIR}/src/GLT/Triangle.o \
-	${OBJECTDIR}/src/GLT/Vertex.o
+	${OBJECTDIR}/src/GLT/Vertex.o \
+	${OBJECTDIR}/src/GLT/VertexArray.o
 
 
 # C Compiler Flags
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=-m64 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y
-CXXFLAGS=-m64 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector -std=c++1y
+CCFLAGS=-m64 -std=c++14 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector
+CXXFLAGS=-m64 -std=c++14 -Wfatal-errors -Wall -Wextra -pedantic -Winit-self -Wmissing-include-dirs -Wswitch-default -Wswitch-enum -Wswitch-default -Wfloat-equal -Wshadow -Wcast-qual -Wcast-align -Wwrite-strings -Wconversion -Wsign-conversion -Wlogical-op -Wmissing-declarations -Wmissing-noreturn -Wmissing-format-attribute -Wpacked -Wredundant-decls -Wunreachable-code -Winvalid-pch -Wvolatile-register-var -Wdisabled-optimization -Wstack-protector
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -77,57 +78,62 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/liblibgltools.a: ${OBJECTFILES}
 ${OBJECTDIR}/src/GLT/Frame.o: src/GLT/Frame.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Frame.o src/GLT/Frame.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Frame.o src/GLT/Frame.cpp
 
 ${OBJECTDIR}/src/GLT/GLMatrix.o: src/GLT/GLMatrix.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/GLMatrix.o src/GLT/GLMatrix.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/GLMatrix.o src/GLT/GLMatrix.cpp
 
 ${OBJECTDIR}/src/GLT/GeometryTransform.o: src/GLT/GeometryTransform.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/GeometryTransform.o src/GLT/GeometryTransform.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/GeometryTransform.o src/GLT/GeometryTransform.cpp
 
 ${OBJECTDIR}/src/GLT/Image.o: src/GLT/Image.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Image.o src/GLT/Image.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Image.o src/GLT/Image.cpp
 
 ${OBJECTDIR}/src/GLT/MVPMatrix.o: src/GLT/MVPMatrix.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/MVPMatrix.o src/GLT/MVPMatrix.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/MVPMatrix.o src/GLT/MVPMatrix.cpp
 
 ${OBJECTDIR}/src/GLT/MatrixStack.o: src/GLT/MatrixStack.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/MatrixStack.o src/GLT/MatrixStack.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/MatrixStack.o src/GLT/MatrixStack.cpp
 
 ${OBJECTDIR}/src/GLT/Model.o: src/GLT/Model.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Model.o src/GLT/Model.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Model.o src/GLT/Model.cpp
 
 ${OBJECTDIR}/src/GLT/Shader.o: src/GLT/Shader.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Shader.o src/GLT/Shader.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Shader.o src/GLT/Shader.cpp
 
 ${OBJECTDIR}/src/GLT/Texture.o: src/GLT/Texture.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Texture.o src/GLT/Texture.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Texture.o src/GLT/Texture.cpp
 
 ${OBJECTDIR}/src/GLT/Triangle.o: src/GLT/Triangle.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Triangle.o src/GLT/Triangle.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Triangle.o src/GLT/Triangle.cpp
 
 ${OBJECTDIR}/src/GLT/Vertex.o: src/GLT/Vertex.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/GLT
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -Wall -DGLEW_STATIC -I../../../../../lib/glew-1.11.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtga/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Vertex.o src/GLT/Vertex.cpp
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/Vertex.o src/GLT/Vertex.cpp
+
+${OBJECTDIR}/src/GLT/VertexArray.o: src/GLT/VertexArray.cpp 
+	${MKDIR} -p ${OBJECTDIR}/src/GLT
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -Werror -DGLEW_STATIC -I../../../lib/glew-1.12.0/include -I../libmatrix/src -I../libobj/src -I../libvector/src -I../libtools/src -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/GLT/VertexArray.o src/GLT/VertexArray.cpp
 
 # Subprojects
 .build-subprojects:
