@@ -31,8 +31,7 @@ namespace glt
       VertexArray(Model const& i_model);
       VertexArray(VertexArray&& that) noexcept;
       VertexArray& operator=(VertexArray&& that) noexcept;
-      GLuint VerArr() {return m_vertexArray;}
+      GLuint VerArr() const {return m_vertexArray;}
   };
 }
 #endif	/* VERTEXARRAY_HPP */
-

@@ -12,21 +12,13 @@
 #include "GL/glew.h"
 #include "Vertex.hpp"
 
-namespace obj
-{
-    class Object;
-}
 namespace glt
 {
-    struct Model
-    {
-        std::vector< Vertex > m_vertexList;
-        std::vector< GLuint > m_indexList;
-
-        Model() = default;
-        Model( obj::Object const& i_object );
-    };
+  struct Model
+  {
+    std::vector<Vertex> m_vertexList;
+    std::vector<GLuint> m_indexList;
+  };
 }
 
 #endif	/* MODEL_HPP */
-

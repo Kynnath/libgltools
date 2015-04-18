@@ -70,6 +70,10 @@ namespace glt
     glVertexAttribPointer(Vertex::Position, 3, GL_FLOAT, GL_FALSE,
         sizeof(Vertex), (GLvoid const*)Vertex::PositionOffset);
 
+    glEnableVertexAttribArray(Vertex::Color);
+    glVertexAttribPointer(Vertex::Color, 4, GL_FLOAT, GL_FALSE,
+        sizeof(Vertex), (GLvoid const*)Vertex::ColorOffset);
+
     glEnableVertexAttribArray(glt::Vertex::Texture);
     glVertexAttribPointer(glt::Vertex::Texture, 2, GL_FLOAT, GL_FALSE,
         sizeof(Vertex), (GLvoid const*)Vertex::TextureOffset);

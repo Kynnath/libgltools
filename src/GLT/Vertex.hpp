@@ -26,10 +26,10 @@ namespace glt
     {
       PositionOffset = 0,
       ColorOffset = sizeof(GLfloat)*3,
-      TextureOffset = ColorOffset + sizeof(GLfloat)*3
+      TextureOffset = ColorOffset + sizeof(GLfloat)*4
     };
     std::array<GLfloat,3> m_position;
-    std::array<GLfloat,3> m_color;
+    std::array<GLfloat,4> m_color;
     std::array<GLfloat,2> m_texture;
   };
 
@@ -38,4 +38,3 @@ namespace glt
 }
 
 #endif	/* VERTEX_HPP */
-
